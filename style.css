@@ -1,0 +1,87 @@
+/*GENERAL*/
+
+/*permet d'inport la font*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/*  * permet de tout ciblé dans le html */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins;
+}
+
+html{
+    scroll-behavior : smooth ; /* pour que les liens soient plus lisibles et ne bougent pas en cas de scroll */
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+/*TRANSITIONS*/
+a,.btn{
+    transition: all 300ms ease;
+}
+
+/*NAV BUREAU*/
+nav, .nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    /*Permet de mettre de l'espace entre le soulignement sur la nav*/
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*HAMBURGER MENU*/
+
+#hamburger-nav{
+    /*permet de pas le voir si on est pas au bon format*/
+    display: none;
+}
+
+#hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+#hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}

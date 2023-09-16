@@ -1,0 +1,9 @@
+/*SI LA TAILLE DE L'ecran inférieur a 1200 px on change le menu a burger et on cache l'autre*/
+@media screen and (max-width: 1200px) {
+    #desktop-nav{
+        display: none;
+    }
+    #hamburger-nav{
+        display: flex;
+    }
+}
