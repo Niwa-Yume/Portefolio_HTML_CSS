@@ -1,17 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon portefolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon portefolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
   <!--Header-->
-    <nav id="desktop-nav">
-      <div class="logo">Julien Castro</div>
-      <div>
+  <nav id="desktop-nav">
+    <div class="logo">Julien Castro</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#experience">Mes compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Mobile Header -->
+  <nav id="hamburger-nav">
+    <div class="logo">Julien Castro</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Mes compétences</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!--Mon profil principal -->
+
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/Julien_CASTRO-removebg-preview.png" alt="photo  de mon visage" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Bonjour je suis</p>
+      <h1 class="title">Julien Castro</h1>
+      <p class="section__text__p2">Développeur</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+          Télécharger CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Me contacter
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="Mon linkedin" class="icon"
+          onclick="location.href='https://linkedin.com/in/julien-castro/'" />
+        <img src="./assets/github.png" alt="Mon Github" class="icon"
+          onclick="location.href='https://github.com/Niwa-Yume'" />
+      </div>
+    </div>
+  </section>
+
+  <!--MON PROFIL AVEC MES COMPTETENCE -->
+
+  <section id="about">
+    <p class="section__text__p1">En savoir plus sur</p>
+    <h1 class="title">Moi</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic-removebg-preview.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>1 année <br />Développement Frontend</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Parcour Scolaire</h3>
+            <p>Bachelor en développement web et mobile<br />Maturité informatique de Gestion</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            En tant qu'étudiant passionné par le numérique et les nouvelles technologies, je suis constamment stimulé
+            par les opportunités offertes par ces domaines en constante évolution. Mon objectif est de m'impliquer
+            activement dans ces domaines qui me passionnent, et de contribuer à leur développement. <br> <br>
+            Je suis particulièrement fasciné par les technologies émergentes telles que la blockchain, l'intelligence
+            artificielle et les fintech. La blockchain, avec son potentiel de décentralisation et de sécurisation des
+            transactions, ouvre de nouvelles perspectives passionnantes dans divers secteurs. L'intelligence
+            artificielle, quant à elle, représente une révolution en termes d'automatisation et de traitement
+            intelligent des données. Enfin, la fintech révolutionne le paysage financier en proposant des solutions
+            innovantes et des services financiers accessibles à tous. <br> <br>
+            Mon intérêt pour ces domaines se nourrit de ma curiosité insatiable. Je suis prêt à relever les défis qui se
+            présentent. Je suis convaincu que mon enthousiasme et ma volonté d'apprendre me permettront de contribuer de
+            manière significative à l'évolution de ces technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="image de flèche" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Découvrez</p>
+    <h1 class="title">Mes compétences</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Compétences Informatique</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experimenté</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experimenté</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>intérmediaire</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Intermédiaire</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Docker</h3>
+                <p>Basique</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Autre compétences</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h4>Méthode Agiles</h4>
+                <p>Intermédiaire</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Office 365</h3>
+                <p>Experimenté</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h4>Communication digital</h4>
+                <p>Intermédiaire</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SEO</h3>
+                <p>Intermédiaire</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Canva</h3>
+                <p>Experimenté</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <!--Mon PROFIL AVEC MES PROJETS ARTIE 1 -->
+  <section id="projects">
+    <p class="section__text__p1">Je vous présente</p>
+    <h1 class="title">Mes projets</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <!--BLOCK PROJET 1-->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/projet-1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Noctinium</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Niwa-Yume/Noctinium'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://noctinium.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!--BLOCK PROJET 2-->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/le goblins.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Le site du goblin</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Niwa-Yume/Site_responsive_goblin'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://niwa-yume.github.io/Site_responsive_goblin/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <!--FIN BLOCK PROJET 2-->
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--Mon PROFIL AVEC MES PROJETS PARTIE 2 -->
+  <section id="projects">
+    <br>
+    <br>
+    <p class="section__text__p1">Je vous présente</p>
+    <h1 class="title">Mes projets parti 2</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <!--BLOCK PROJET 1 PAR 2-->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/projet-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Python web Scrapping</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Niwa-Yume/script_web_scrapping'">
+              Github
+            </button>
+          </div>
+        </div>
+        <!--BLOCK PROJET 2 PART 2-->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/image bot python.jpg" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Python bot telegram</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Niwa-Yume/jujujitsu_bot'">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+
+
+  <!-- MOYENS DE CONTACT -->
+
+
+  <section id="contact">
+    <p class="section__text__p1">Si vous voulez prendre contacte avec moi</p>
+    <h1 class="title">Les moyens de me contacter</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:examplemail@gmail.com">julien.castro@protonmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://linkedin.com/in/julien-castro/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">À propos</a></li>
           <li><a href="#experience">Mes compétences</a></li>
@@ -20,425 +317,9 @@
         </ul>
       </div>
     </nav>
-    <!--Mobile Header -->
-    <nav id="hamburger-nav">
-      <div class="logo">Julien Castro</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">À propos</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Mes compétences</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-
-    <!--Mon profil principal -->
-
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/Julien_CASTRO-removebg-preview.png" alt="photo  de mon visage" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Bonjour je suis</p>
-        <h1 class="title">Julien Castro</h1>
-        <p class="section__text__p2">Développeur</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Télécharger CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Me contacter
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="Mon linkedin"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/julien-castro/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="Mon Github"
-            class="icon"
-            onclick="location.href='https://github.com/Niwa-Yume'"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!--MON PROFIL AVEC MES COMPTETENCE -->
-
-    <section id="about">
-      <p class="section__text__p1">En savoir plus sur</p>
-      <h1 class="title">Moi</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/profile-pic-removebg-preview.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1 année <br />Développement Frontend</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Parcour Scolaire</h3>
-              <p>Bachelor en développement web et mobile<br />Maturité informatique de Gestion</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              En tant qu'étudiant passionné par le numérique et les nouvelles technologies, je suis constamment stimulé par les opportunités offertes par ces domaines en constante évolution. Mon objectif est de m'impliquer activement dans ces domaines qui me passionnent, et de contribuer à leur développement. <br> <br>
-              Je suis particulièrement fasciné par les technologies émergentes telles que la blockchain, l'intelligence artificielle et les fintech. La blockchain, avec son potentiel de décentralisation et de sécurisation des transactions, ouvre de nouvelles perspectives passionnantes dans divers secteurs. L'intelligence artificielle, quant à elle, représente une révolution en termes d'automatisation et de traitement intelligent des données. Enfin, la fintech révolutionne le paysage financier en proposant des solutions innovantes et des services financiers accessibles à tous. <br> <br>
-              Mon intérêt pour ces domaines se nourrit de ma curiosité insatiable. Je suis prêt à relever les défis qui se présentent. Je suis convaincu que mon enthousiasme et ma volonté d'apprendre me permettront de contribuer de manière significative à l'évolution de ces technologies.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="image de flèche"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Découvrez</p>
-      <h1 class="title">Mes compétences</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Compétences Informatique</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experimenté</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experimenté</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>intérmediaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Docker</h3>
-                  <p>Basique</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Autre compétences</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h4>Méthode Agiles</h4>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Office 365</h3>
-                  <p>Experimenté</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h4>Communication digital</h4>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SEO</h3>
-                  <p>Intermédiaire</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Canva</h3>
-                  <p>Experimenté</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-
-
-    <!--Mon PROFIL AVEC MES PROJETS ARTIE 1 -->
-
-
-    <section id="projects">
-      <p class="section__text__p1">Je vous présente</p>
-      <h1 class="title">Mes projets</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projet-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Noctinium</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Niwa-Yume/Noctinium'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://noctinium.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projet-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Python web Scrapping</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Niwa-Yume/script_web_scrapping'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/projet-3.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Calculatrice JavaScript</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Niwa-Yume/calculatrice/'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--Mon PROFIL AVEC MES PROJETS PARTIE 2 -->
-
-    <section id="projects">
-      <p class="section__text__p1">Je vous présente</p>
-      <h1 class="title">Mes projets  parti 2</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/le goblins.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Le site du goblin</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Niwa-Yume/Site_responsive_goblin'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://niwa-yume.github.io/Site_responsive_goblin/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/image bot python.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Python bot telegram</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Niwa-Yume/jujujitsu_bot'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/>
-    </section>
-
-
-    <!-- MOYENS DE CONTACT -->
-
-
-    <section id="contact">
-      <p class="section__text__p1">Si vous voulez prendre contacte avec moi</p>
-      <h1 class="title">Les moyens de me contacter</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">julien.castro@protonmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://linkedin.com/in/julien-castro/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#experience">Mes compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Julien Castro. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+    <p>Copyright &#169; 2023 Julien Castro. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
