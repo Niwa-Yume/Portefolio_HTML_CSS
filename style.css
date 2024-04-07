@@ -8,13 +8,7 @@
 }
 
 /** FOND GRADIENT ANIME**/
-.test {
-  background: linear-gradient(341deg,#f0f945,#edb96f);
-  background-size: 120% 120%;
-  animation: gradient-animation 12s ease infinite;
-}
-
-@keyframes gradient-animation {
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
@@ -25,6 +19,13 @@
     background-position: 0% 50%;
   }
 }
+
+.test {
+  background-size: 200% 200%;
+  background-image: linear-gradient(45deg, #94ffd1, #ffffff, #94ffd1);
+  animation: gradientAnimation 5s ease infinite;
+}
+
 
 body {
   font-family: "Poppins", sans-serif;
